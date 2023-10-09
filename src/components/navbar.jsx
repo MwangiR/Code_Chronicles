@@ -9,13 +9,16 @@ const Navbar = () => {
       style={{
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         top: 0,
       }}
     >
-      <Menu.Item key='logo' style={{ color: 'white', alignSelf: 'flex-start' }}>
+      <Menu.Item
+        key='logo'
+        style={{ color: 'white', alignSelf: 'flex-start', marginRight: 'auto' }}
+      >
         Logo
       </Menu.Item>
-
       <Menu.Item key='settings' icon={<SettingOutlined />} style={{ float: 'right' }}>
         Settings
       </Menu.Item>
