@@ -6,6 +6,8 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import 'antd/dist/reset.css';
+
 const router = createBrowserRouter([
   {
     path: '/',

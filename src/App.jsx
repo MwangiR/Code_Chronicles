@@ -1,16 +1,30 @@
 import { Outlet } from 'react-router-dom';
+import { Layout } from 'antd';
+
 import Navbar from './components/navbar';
-import Footer from './components/footer';
+import BottomNav from './components/footer';
+import './App.css';
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <section>
-        <Outlet />
-      </section>
-      <Footer />
-    </>
+
+    <Layout className='container'>
+      <Header>
+        <Navbar />
+      </Header>
+
+      <Content>
+        <section>
+          <Outlet />
+        </section>
+      </Content>
+
+      <Footer>
+        <BottomNav />
+      </Footer>
+    </Layout>
   );
 }
 
