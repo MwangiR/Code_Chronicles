@@ -8,10 +8,10 @@ export default function About() {
         <Col span={18} flex={3} style={{ marginTop: '1%' }}>
           <Form>
             <Form.Item label='Name'>
-              <Input placeholder='input placeholder' style={{ height: '50px' }} />
+              <Input placeholder='John Doe' style={{ height: '50px' }} />
             </Form.Item>
             <Form.Item label='Email'>
-              <Input placeholder='input placeholder' style={{ height: '50px' }} />
+              <Input placeholder='johndoe@email.com' style={{ height: '50px' }} />
             </Form.Item>
             <Form.Item label='Introduction'>
               <Input.TextArea style={{ height: '200px' }} />
