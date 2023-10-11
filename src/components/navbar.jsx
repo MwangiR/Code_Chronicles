@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, SettingOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, BarcodeOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
   return (
@@ -21,12 +21,16 @@ const Navbar = () => {
         Logo
       </Menu.Item>
 
-      <Menu.Item key='home' icon={<HomeOutlined />}>
-        <Link to='/'>Home</Link>
+      <Menu.Item key='about' icon={<BarcodeOutlined />} style={{ float: 'right' }}>
+        <Link to='/'>About</Link>
       </Menu.Item>
 
-      <Menu.Item key='settings' icon={<SettingOutlined />} style={{ float: 'right' }}>
-        Settings
+      <Menu.Item key='home' icon={<HomeOutlined />}>
+        <Link to='/Home'>Home</Link>
+      </Menu.Item>
+
+      <Menu.Item key='Contact' icon={<UserOutlined />} style={{ float: 'right' }}>
+        <Link to='/Contact'>Contact</Link>
       </Menu.Item>
 
       <Menu.Item key='profile' icon={<UserOutlined />} style={{ float: 'right' }}>
