@@ -1,4 +1,4 @@
-import { Row, Col } from 'antd';
+import { Row, Col, Divider } from 'antd';
 import { Button, Form, Input } from 'antd';
 
 export default function About() {
@@ -16,8 +16,9 @@ export default function About() {
             <Form.Item label='Introduction'>
               <Input.TextArea style={{ height: '200px' }} />
             </Form.Item>
+            <Divider />
             <Form.Item>
-              <Button type='primary' size='large'>
+              <Button type='primary' size='large' shape='round'>
                 Submit
               </Button>
             </Form.Item>

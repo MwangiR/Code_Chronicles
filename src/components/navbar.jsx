@@ -25,16 +25,16 @@ const Navbar = () => {
         <Link to='/'>About</Link>
       </Menu.Item>
 
-      <Menu.Item key='home' icon={<HomeOutlined />}>
-        <Link to='/Home'>Home</Link>
+      <Menu.Item key='portfolio' icon={<HomeOutlined />}>
+        <Link to='/Portfolio'>Portfolio</Link>
       </Menu.Item>
 
       <Menu.Item key='Contact' icon={<UserOutlined />} style={{ float: 'right' }}>
         <Link to='/Contact'>Contact</Link>
       </Menu.Item>
 
-      <Menu.Item key='profile' icon={<UserOutlined />} style={{ float: 'right' }}>
-        <Link to='/Profile'>Profile</Link>
+      <Menu.Item key='resume' icon={<UserOutlined />} style={{ float: 'right' }}>
+        <Link to='/Resume'>Resume</Link>
       </Menu.Item>
     </Menu>
   );
