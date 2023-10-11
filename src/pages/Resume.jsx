@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <Row>
       <Col span={16} offset={5}>
-        <Card style={{ marginTop: '1%' }}>
+        <Card hoverable style={{ marginTop: '1%' }}>
           <h1>Resume</h1>
           <Timeline
             items={[
@@ -23,7 +23,7 @@ export default function Resume() {
           ></Timeline>
         </Card>
       </Col>
-      <Col span={16} offset={5}>
+      <Col span={16} offset={5} style={{ marginTop: '1%' }}>
         <Space direction='vertical'>
           <Text code style={{ fontSize: '20px' }}>
             Link to Resume
