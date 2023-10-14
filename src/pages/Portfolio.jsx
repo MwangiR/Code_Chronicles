@@ -1,4 +1,4 @@
-import { Card, Col, Row, Space } from 'antd';
+import { Card, Col, Row } from 'antd';
 import PortfolioList from '../components/PortfolioList';
 import { Typography } from 'antd';
 
@@ -7,7 +7,7 @@ const { Title } = Typography;
 export default function Home() {
   return (
     <Row>
-      <Col span={20} offset={2} style={{ marginTop: '1%' }}>
+      <Col span={20} offset={2} style={{ marginTop: '1%', marginBottom: '10%' }}>
         <Card>
           <Row>
             <Col offset={3} span={20}>

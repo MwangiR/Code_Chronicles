@@ -9,13 +9,12 @@ const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-
-    <Layout className='container'>
+    <Layout className='container' id='app'>
       <Header>
         <Navbar />
       </Header>
 
-      <Content>
+      <Content className='pageContent'>
         <section>
           <Outlet />
         </section>
