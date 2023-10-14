@@ -17,6 +17,18 @@ body {
   flex-direction: column;
 }
 
+.aboutContent {
+  font-family: 'DM Mono' monospace;
+}
+
+.profilePhoto {
+  background-image: url('./images/cartoonize_DSCF1821.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 500px;
+  max-width: 100%;
+}
+
 footer {
   width: 100%;
   position: fixed;
