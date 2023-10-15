@@ -48,7 +48,7 @@ This portfolio application was developed and designed to showcase my web applica
 
 ## Technologies Used
 
-This application is powered by React.js (v18.2.0). Material UI (v5.13.6) and CSS were utilized to create the overall styling of the user interface.
+This application is powered by React.js (v18.2.0). Ant Design and CSS were utilized to create the overall styling of the user interface.
 
 ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
 ![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)
