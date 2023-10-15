@@ -61,7 +61,7 @@ export default function About() {
         backgroundColor: '#F4FAFF',
       }}
       bodyStyle={{
-        padding: '10%',
+        padding: '4%',
       }}
     >
       <Row gutter={10} align={'center'}>
