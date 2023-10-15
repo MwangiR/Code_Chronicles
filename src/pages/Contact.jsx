@@ -147,7 +147,7 @@ export default function About() {
           <Image
             width={500}
             className='sendWrapper'
-            src='src\images\Send.png'
+            src='./src/images/Send.png'
             preview={false}
             style={{
               marginTop: -60,

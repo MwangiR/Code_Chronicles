@@ -1,12 +1,62 @@
 import { useState, useEffect } from 'react';
-import { Card, Row, Col, Typography, Avatar } from 'antd';
+import { Card, Row, Col, Typography, Avatar, Divider, Input, Button } from 'antd';
+import axios from 'axios';
+
 const { Paragraph, Text } = Typography;
 
 export default function About() {
   const [fadeIn, setFadeIn] = useState(false);
+  const [bio, setBio] = useState('');
+  const [isBioVisible, setBioVisible] = useState(false);
+  const [questionAnswer, setQuestionAnswer] = useState('');
+  const [riddle, setRiddle] = useState('');
+  const [answer, setAnswer] = useState('');
+  const [isAnswerVisible, setIsAnswerVisible] = useState(false);
+
+  const bioParagraph = `I am Renny Mwangi, a dedicated Full Stack Software Developer with a master's degree in Computer Science. My skill set includes proficiency in NoSQL, React, Express.js, Node.js, JavaScript, SQL, HTML, and CSS, along with various development tools. I've actively contributed to projects like Advertir, where I leveraged these skills, along with Java and Firebase technologies, to create innovative solutions. I'm a passionate lifelong learner, always eager to explore new horizons in the world of software development.`;
+
   useEffect(() => {
+    const fetchRiddleSync = async () => {
+      try {
+        const fetchRiddle = await axios.get('https://riddles-api.vercel.app/random');
+        const { riddle, answer } = fetchRiddle.data;
+        setRiddle(riddle);
+        setAnswer(answer);
+        console.log('Answer: ', answer);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchRiddleSync();
+  }, []);
+
+  const shuffleString = (text) => {
+    const shuffledText = text
+      .split('')
+      .sort(() => 0.5 - Math.random())
+      .join('');
+    setBio(shuffledText);
+  };
+
+  const handleQuestion = () => {
+    if (questionAnswer.toLocaleLowerCase() === answer.toLocaleLowerCase()) {
+      setBioVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    shuffleString(bioParagraph);
     setFadeIn(true);
   }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsAnswerVisible(true);
+      setBioVisible(true);
+    }, 10000);
+    return () => clearTimeout(timeoutId);
+  }, [questionAnswer]);
+
   return (
     <Card
       hoverable
@@ -31,22 +81,42 @@ export default function About() {
           </Typography.Title>
 
           <Typography.Title style={{ fontFamily: 'DM Mono, monospace' }}>
-            / Hello, I&apos;m a Software developer /
+            / Hello, Im a Software developer /
           </Typography.Title>
 
-          <Paragraph style={{ textAlign: 'justify', lineHeight: '30px' }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officiis explicabo
-            corporis magni id esse voluptas eveniet! Magnam itaque pariatur at quae quam, dolores
-            fugiat fugit provident veritatis eius ex? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ipsam tempore exercitationem neque vero in delectus, commodi illum,
-            sapiente minima adipisci rem provident, repellendus officia? Veritatis facere obcaecati
-            est odio delectus? Rem unde saepe suscipit facere, quo non corporis libero ut ipsum
-            dignissimos nihil facilis corrupti numquam harum illo quas exercitationem. Tempora
-            laudantium pariatur nulla vitae eum quas quidem impedit explicabo! Tenetur, quidem,
-            eveniet saepe eligendi repudiandae asperiores mollitia tempora aliquam ratione ullam
-            accusamus eum nobis suscipit laboriosam iste exercitationem, alias ipsam neque
-            veritatis? Vitae vel ex, officia sequi earum ducimus?
-          </Paragraph>
+          {isBioVisible ? (
+            <Paragraph style={{ textAlign: 'justify', lineHeight: '30px' }}>
+              {bioParagraph}
+            </Paragraph>
+          ) : (
+            <Paragraph style={{ textAlign: 'justify', lineHeight: '30px' }}>{bio}</Paragraph>
+          )}
+
+          <Divider />
+          <Col>
+            <Typography.Title style={{ fontFamily: 'DM Mono, monospace' }}>
+              Unscramble the Bio
+            </Typography.Title>
+            <Paragraph style={{ textAlign: 'justify', lineHeight: '30px' }}>
+              <Text mark>Solve the following to unscramble the bio</Text>
+              <br />
+              <Text code>Riddle:</Text> {riddle}
+            </Paragraph>
+
+            <Input type='text' onChange={(e) => setQuestionAnswer(e.target.value)} />
+            <Button
+              type='primary'
+              shape='round'
+              onClick={handleQuestion}
+              style={{
+                marginTop: '10px',
+              }}
+            >
+              Submit
+            </Button>
+            <br />
+            {isAnswerVisible && <Text code>Answer: {answer}</Text>}
+          </Col>
         </Col>
       </Row>
     </Card>
