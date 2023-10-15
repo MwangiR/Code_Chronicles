@@ -2,6 +2,33 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import { HomeOutlined, UserOutlined, BarcodeOutlined } from '@ant-design/icons';
 
+const menuItems = [
+  {
+    key: 'about',
+    icon: <BarcodeOutlined />,
+    text: 'About',
+    link: '/',
+  },
+  {
+    key: 'portfolio',
+    icon: <HomeOutlined />,
+    text: 'Portfolio',
+    link: '/Portfolio',
+  },
+  {
+    key: 'contact',
+    icon: <UserOutlined />,
+    text: 'Contact',
+    link: '/Contact',
+  },
+  {
+    key: 'resume',
+    icon: <UserOutlined />,
+    text: 'Resume',
+    link: '/Resume',
+  },
+];
+
 const Navbar = () => {
   return (
     <Menu
@@ -18,24 +45,14 @@ const Navbar = () => {
         key='logo'
         style={{ color: 'white', alignSelf: 'flex-start', marginRight: 'auto' }}
       >
-        Logo
+        <Link to='/'>Renny</Link>
       </Menu.Item>
 
-      <Menu.Item key='about' icon={<BarcodeOutlined />} style={{ float: 'right' }}>
-        <Link to='/'>About</Link>
-      </Menu.Item>
-
-      <Menu.Item key='portfolio' icon={<HomeOutlined />}>
-        <Link to='/Portfolio'>Portfolio</Link>
-      </Menu.Item>
-
-      <Menu.Item key='Contact' icon={<UserOutlined />} style={{ float: 'right' }}>
-        <Link to='/Contact'>Contact</Link>
-      </Menu.Item>
-
-      <Menu.Item key='resume' icon={<UserOutlined />} style={{ float: 'right' }}>
-        <Link to='/Resume'>Resume</Link>
-      </Menu.Item>
+      {menuItems.map((item) => (
+        <Menu.Item key={item.key} icon={item.icon} style={{ float: 'right' }}>
+          <Link to={item.link}>{item.text}</Link>
+        </Menu.Item>
+      ))}
     </Menu>
   );
 };
