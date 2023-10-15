@@ -1,6 +1,20 @@
-import { Row, Col, Divider, Button, Form, Input, Card, Image, notification } from 'antd';
+import {
+  Row,
+  Col,
+  Divider,
+  Button,
+  Form,
+  Input,
+  Card,
+  Image,
+  notification,
+  Typography,
+} from 'antd';
 import { SendOutlined } from '@ant-design/icons';
+
 import { useState } from 'react';
+
+const { Title } = Typography;
 
 export default function About() {
   const [form] = Form.useForm();
@@ -53,6 +67,9 @@ export default function About() {
       <Row gutter={10} align={'center'}>
         <Col className='gutter-row' span={10}>
           <div>
+            <Divider orientation='left'>
+              <Title level={2}>Contact Form</Title>
+            </Divider>
             <Form labelCol={{ span: 5 }} form={form} onFinish={onFinish}>
               <Form.Item
                 name='name'
@@ -71,6 +88,7 @@ export default function About() {
                     if (!e.target.value) {
                       notification.error({
                         message: 'Name is required',
+                        placement: 'top',
                       });
                     }
                   }}
@@ -97,6 +115,7 @@ export default function About() {
                     if (!e.target.value) {
                       notification.error({
                         message: 'Email is required',
+                        placement: 'top',
                       });
                     }
                   }}
@@ -117,6 +136,7 @@ export default function About() {
                     if (!e.target.value) {
                       notification.error({
                         message: 'Message required',
+                        placement: 'top',
                       });
                     }
                   }}
