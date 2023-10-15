@@ -10,26 +10,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
 .pageContent {
   display: flex;
+  width: 100%;
   flex: 1;
   overflow-y: auto;
-  flex-direction: column;
-}
-
-.aboutContent {
-  font-family: 'DM Mono' monospace;
+  flex-direction: row;
 }
 
 .profilePhoto {
   background-image: url('./images/cartoonize_DSCF1821.jpg');
   background-size: 100% auto;
-  background-repeat: no-repeat;
-  height: 500px;
-  max-width: 100%;
+  background-position: bottom;
 }
 
 footer {
+  height: 80px;
   width: 100%;
   position: fixed;
   bottom: 0;

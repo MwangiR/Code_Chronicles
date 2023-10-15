@@ -15,9 +15,7 @@ function App() {
       </Header>
 
       <Content className='pageContent'>
-        <section>
-          <Outlet />
-        </section>
+        <Outlet />
       </Content>
 
       <Footer>

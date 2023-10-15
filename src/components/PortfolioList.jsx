@@ -4,7 +4,7 @@ const { Meta } = Card;
 
 export default function PortfolioList() {
   return (
-    <Col span={12}>
+    <Col span={18}>
       <Card
         hoverable
         cover={
