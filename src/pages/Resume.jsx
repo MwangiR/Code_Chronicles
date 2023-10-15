@@ -4,6 +4,61 @@ import { CloudDownloadOutlined } from '@ant-design/icons';
 const { Text } = Typography;
 
 export default function Resume() {
+  const timelineItems = [
+    {
+      color: 'green',
+      children: 'HTML',
+    },
+    {
+      color: 'green',
+      children: 'CSS',
+    },
+    {
+      color: 'green',
+      children: 'APIs',
+    },
+    {
+      color: 'green',
+      children: 'Javascript',
+    },
+    {
+      color: 'green',
+      children: 'Node.js',
+    },
+    {
+      color: 'green',
+      children: 'JQuery',
+    },
+    {
+      color: 'green',
+      children: 'MySql',
+    },
+    {
+      color: 'green',
+      children: 'Responsive design',
+    },
+    {
+      color: 'green',
+      children: 'MongoDB',
+    },
+    {
+      color: 'green',
+      children: 'React',
+    },
+    {
+      color: 'green',
+      children: 'REST',
+    },
+    {
+      color: 'green',
+      children: 'Bootstrap',
+    },
+    {
+      color: 'green',
+      children: 'GraphQL',
+    },
+  ];
+
   return (
     <Card
       hoverable
@@ -20,14 +75,7 @@ export default function Resume() {
         <Col span={16} offset={5}>
           <Card hoverable>
             <h1>Resume</h1>
-            <Timeline>
-              <Timeline.Item className='timeline-item' color='green'>
-                React
-              </Timeline.Item>
-              <Timeline.Item className='timeline-item' color='green'>
-                Graphql
-              </Timeline.Item>
-            </Timeline>
+            <Timeline mode='alternate' items={timelineItems}></Timeline>
           </Card>
         </Col>
         <Col span={16} offset={5} style={{ marginTop: '1%' }}>
