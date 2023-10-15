@@ -7,8 +7,9 @@ export default function Home() {
       hoverable
       style={{
         width: '100%',
-        padding: '2%',
-        margin: '2% 2% 5% 2%',
+        padding: '1%',
+        margin: '1% 1% 5% 1%',
+        overflowY: 'auto',
       }}
       bodyStyle={{
         padding: 0,
