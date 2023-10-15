@@ -1,6 +1,6 @@
 import { Layout, Typography } from 'antd';
-import { Link } from 'react-router-dom';
-import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+
+import { GithubOutlined, LinkedinOutlined, CodepenOutlined } from '@ant-design/icons';
 
 const { Footer } = Layout;
 const { Text } = Typography;
@@ -19,7 +19,10 @@ function AppFooter() {
           <LinkedinOutlined />
           <Text>LinkedIn</Text>
         </a>
-        <Link to='/contact-us'>Contact Us</Link>
+        <a href='https://codepen.io/AdenJJ' style={{ marginRight: '10px' }}>
+          <CodepenOutlined />
+          <Text>Codepen</Text>
+        </a>
       </div>
     </Footer>
   );
