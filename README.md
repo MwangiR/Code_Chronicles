@@ -42,9 +42,9 @@ This portfolio application was developed and designed to showcase my web applica
 
 ![Portfolio](./src/images/Portfolio.png)
 
-![Contact](./src/pages/Contact.jsx)
+![Contact](./src/images/contactMe.png)
 
-![Resume](./src/pages/Resume.jsx)
+![Resume](./src/images/resume.png)
 
 ## Technologies Used
 
