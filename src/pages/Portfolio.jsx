@@ -22,7 +22,7 @@ export default function Home() {
               title='AccessAid'
               gitURL='https://github.com/MwangiR/AccessAid.git'
               description='Access Aid is a client-centric organization dedicated to enhancing the quality of care for individuals in need of support'
-              src='src\images\healthcare.jpg'
+              src='./healthcare.jpg'
             />
           </div>
         </Col>
@@ -32,7 +32,7 @@ export default function Home() {
               title='Advertir'
               gitURL='https://github.com/MwangiR/Advertir.git'
               description='Contact Tracing Java Application: Advertir is a travel companion that utilised contact tracing to notify you when you were in close contact '
-              src='src\images\advertir.jpg'
+              src='https://github.com/MwangiR/Code_Chronicles/blob/main/src/images/advertir.jpg'
             />
           </div>
         </Col>
