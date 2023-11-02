@@ -32,7 +32,7 @@ export default function Home() {
               title='Advertir'
               gitURL='https://github.com/MwangiR/Advertir.git'
               description='Contact Tracing Java Application: Advertir is a travel companion that utilised contact tracing to notify you when you were in close contact '
-              src='https://github.com/MwangiR/Code_Chronicles/blob/main/src/images/advertir.jpg'
+              src='./advertir.jpg'
             />
           </div>
         </Col>
@@ -42,7 +42,7 @@ export default function Home() {
               title='Spotify Gig Finder'
               gitURL='https://github.com/MwangiR/Group1_Project.git'
               description='The following application displays concerts that are near you with regards to your liked songs'
-              src='src\images\spotify.jpg'
+              src='./spotify.jpg'
             />
           </div>
         </Col>
@@ -54,7 +54,7 @@ export default function Home() {
               title='ViewPoint'
               gitURL='https://github.com/MwangiR/View_Point.git'
               description='Viewpoint combines Movies, TV Shows and Game review all in one spot as well as provide top 10 in each genre'
-              src='src\images\review.jpg'
+              src='./review.jpg'
             />
           </div>
         </Col>
@@ -64,7 +64,7 @@ export default function Home() {
               title='PostCraft'
               gitURL='https://github.com/MwangiR/PostCraft.git'
               description='PostCraft is a blogging application built on handlebars to enable communities to share their thoughts'
-              src='src\images\blog.jpg'
+              src='./blog.jpg'
             />
           </div>
         </Col>
@@ -74,7 +74,7 @@ export default function Home() {
               title='LinkMate'
               gitURL='https://github.com/MwangiR/LinkMate.git'
               description='LinkMate is a Social Network API is a backend application that empowers social networking platforms to manage user profiles, posts, and interactions seamlessly. It utilises NoSQL(MongoDB)'
-              src='src\images\social.jpg'
+              src='./social.jpg'
             />
           </div>
         </Col>
