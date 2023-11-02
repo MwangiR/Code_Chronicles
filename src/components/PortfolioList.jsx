@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Avatar, Card, Col, Typography } from 'antd';
 import { LinkOutlined, GithubOutlined } from '@ant-design/icons';
 const { Text } = Typography;
@@ -8,7 +9,7 @@ export default function PortfolioList(props) {
     <Col span={18}>
       <Card
         hoverable
-        cover={<img alt='example' src='https://picsum.photos/800/400?grayscale' />}
+        cover={<img alt='example' src={props.src} />}
         actions={[
           <a href={props.gitURL} target='_blank' rel='noopener noreferrer' key='github'>
             <GithubOutlined />

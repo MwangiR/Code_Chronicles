@@ -85,7 +85,12 @@ export default function Resume() {
               Link to Resume
             </Text>
           </Space>
-          <Button type='dashed' icon={<CloudDownloadOutlined />} size='large'>
+          <Button
+            type='dashed'
+            icon={<CloudDownloadOutlined />}
+            size='large'
+            href='https://drive.google.com/file/d/1r2N3Io9aWNUNZ6N1WAU6sssMtF0DBlIW/view?usp=drive_link'
+          >
             Download Resume
           </Button>
         </Col>
