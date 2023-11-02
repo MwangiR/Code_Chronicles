@@ -19,9 +19,20 @@ export default function Home() {
         <Col className='gutter-row' span={8}>
           <div>
             <PortfolioList
+              title='AccessAid'
+              gitURL='https://github.com/MwangiR/AccessAid.git'
+              description='Access Aid is a client-centric organization dedicated to enhancing the quality of care for individuals in need of support'
+              src='src\images\healthcare.jpg'
+            />
+          </div>
+        </Col>
+        <Col className='gutter-row' span={8}>
+          <div>
+            <PortfolioList
               title='Advertir'
               gitURL='https://github.com/MwangiR/Advertir.git'
               description='Contact Tracing Java Application: Advertir is a travel companion that utilised contact tracing to notify you when you were in close contact '
+              src='src\images\advertir.jpg'
             />
           </div>
         </Col>
@@ -31,15 +42,7 @@ export default function Home() {
               title='Spotify Gig Finder'
               gitURL='https://github.com/MwangiR/Group1_Project.git'
               description='The following application displays concerts that are near you with regards to your liked songs'
-            />
-          </div>
-        </Col>
-        <Col className='gutter-row' span={8}>
-          <div>
-            <PortfolioList
-              title='ViewPoint'
-              gitURL='https://github.com/MwangiR/View_Point.git'
-              description='Viewpoint combines Movies, TV Shows and Game review all in one spot as well as provide top 10 in each genre'
+              src='src\images\spotify.jpg'
             />
           </div>
         </Col>
@@ -48,18 +51,20 @@ export default function Home() {
         <Col className='gutter-row' span={8}>
           <div>
             <PortfolioList
-              title='PostCraft'
-              gitURL='https://github.com/MwangiR/PostCraft.git'
-              description='PostCraft is a blogging application built on handlebars to enable communities to share their thoughts'
+              title='ViewPoint'
+              gitURL='https://github.com/MwangiR/View_Point.git'
+              description='Viewpoint combines Movies, TV Shows and Game review all in one spot as well as provide top 10 in each genre'
+              src='src\images\review.jpg'
             />
           </div>
         </Col>
         <Col className='gutter-row' span={8}>
           <div>
             <PortfolioList
-              title='CommerceSync'
-              gitURL='https://github.com/MwangiR/CommerceSync.git'
-              description='CommerceSync is a E-Commerce backend application that utilizes MySQL (relational database)'
+              title='PostCraft'
+              gitURL='https://github.com/MwangiR/PostCraft.git'
+              description='PostCraft is a blogging application built on handlebars to enable communities to share their thoughts'
+              src='src\images\blog.jpg'
             />
           </div>
         </Col>
@@ -69,6 +74,7 @@ export default function Home() {
               title='LinkMate'
               gitURL='https://github.com/MwangiR/LinkMate.git'
               description='LinkMate is a Social Network API is a backend application that empowers social networking platforms to manage user profiles, posts, and interactions seamlessly. It utilises NoSQL(MongoDB)'
+              src='src\images\social.jpg'
             />
           </div>
         </Col>
